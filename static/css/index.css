@@ -1,0 +1,117 @@
+body{
+    place-items:center;
+}
+#t4{
+    position: absolute;
+    top: 68%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+}
+#out {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+#t3{
+    position: relative;
+    left: 102%;
+    width: 94%;
+}
+.outer {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    background-color: black ;
+    width: 40%;
+    height: 54%;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(0, 0, 0, 0.8);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+}
+  
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    overflow:hidden;
+    cursor:pointer;
+    font-size: 2em;
+    resize:none;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-item2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    overflow:hidden;
+    cursor:pointer;
+    font-size: 2em;
+    text-align: center;
+    
+}
+.Selected{
+    background-color: #2196F3;
+}
+
+@media only screen and (max-width: 600px) {
+    #t4{
+        top: 94%;
+        left: 50%;
+    }
+    .grid-item, .grid-item2{
+        font-size: 1.5em;
+    }
+    #out{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 20%;
+    }
+    .outer{
+        width: 80%;
+        height: 54%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+    }
+}
+
+@media only screen and (max-width: 802px) and (min-width: 600px) {
+    #t4{
+        top: 64%;
+    }
+    body{
+        background-color: aqua
+    }
+    #out{
+        position: absolute;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        height: 20%;
+    }
+    .outer{
+        width: 50%;
+        height: 54%;
+        position: absolute;
+        left: 30%;
+    }
+}
