@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Sudoku Companion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!--Custom Style-->
+    <!-- <link rel="stylesheet" type="text/css" href="index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <!--Vue-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="outer">
+        <div class="grid-container" v-for="elements in nums">
+          <div
+            class="grid-item"
+            v-on:click="Selected($event)"
+            v-for="elements in nums"
+          ></div>
+        </div>
+      </div>
+      <div class="outer" id="out">
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">1</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">2</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">3</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">4</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">5</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">6</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">7</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">8</div>
+        <div class="grid-item2" id="t2" v-on:click="Updated($event)">9</div>
+        <div class="grid-item2" v-on:click="Erased($event)" id="t3">E</div>
+      </div>
+      <div class="grid-item2 btn-primary" v-on:click="Print()" id="t4">
+        Solve
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
